@@ -1,1 +1,409 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi Beriane | ZKP Researcher & Blockchain Developer</title>
+    <style>
+        :root {
+            --primary-color: #e0e0e0;
+            --secondary-color: #66b3ff;
+            --text-color: #d0d0d0;
+            --bg-color: #000000;
+            --light-gray: #1a1a1a;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .intro p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            color: var(--secondary-color);
+        }
+
+        .links a:hover {
+            background-color: var(--light-gray);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-color: var(--secondary-color);
+        }
+
+        .education-item, .paper-item, .software-item, .experience-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: transparent;
+            border-radius: 0;
+            transition: none;
+        }
+
+        .education-item:hover, .paper-item:hover, .software-item:hover, .experience-item:hover {
+            transform: none;
+        }
+
+        .education-item strong, .experience-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-item {
+            position: relative;
+        }
+
+        .paper-venue {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-authors {
+            font-style: italic;
+            color: #666;
+        }
+
+        .software-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .software-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            background-color: #28a745;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 2rem;
+            background-color: transparent;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background-color: transparent;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .intro p strong {
+            color: var(--primary-color);
+        }
+
+        .education-item small, .date, .paper-authors {
+            color: #999999;
+        }
+
+        .education-item em, .experience-item p {
+            color: var(--text-color);
+        }
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .software-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mehdi Beriane</h1>
+        </header>
+
+        <div class="intro">
+            <p>
+                I am a <strong>ZKP Researcher and Blockchain Developer</strong> with over 3 years of experience in blockchain technology, smart contract development, and zero-knowledge proof systems. Currently working at <a href="https://tokamak.network/">Tokamak Network</a> in Singapore, where I conduct research on zk-EVM verification and develop innovative blockchain solutions.
+            </p>
+            <p>
+                I hold a <strong>Master in Finance</strong> from <a href="https://www.essec.edu/">ESSEC Business School</a> (ranked #4 worldwide by Financial Times in 2020) and a <strong>Master of Engineering in Statistics and Signal Processing</strong> from <a href="https://imt-nord-europe.fr/">Institut Mines Telecom Lille Douai</a>.
+            </p>
+            <p>
+                My expertise spans from deep technical blockchain development (Solidity, Rust, Zero-Knowledge Proofs) to financial markets and derivatives trading. I'm passionate about pushing the boundaries of blockchain technology, particularly in areas like zk-SNARKs, DeFi protocols, and smart contract security.
+            </p>
+            <p>
+                Beyond my primary role, I actively contribute to the blockchain community through teaching blockchain development, and participating in security competitions on platforms like Code4rena.
+            </p>
+        </div>
+
+        <section class="section">
+            <h2>Links</h2>
+            <div class="links">
+                <a href="mailto:mehdiberiane@gmail.com">📧 Email</a>
+                <a href="https://github.com/mehdi-defiesta">🐙 GitHub</a>
+                <a href="https://medium.com/@mehdi-tokamak">📝 Medium</a>
+                <a href="https://twitter.com/defiesta">🐦 X (Twitter)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <strong>ESSEC Business School: 2019 - 2021</strong>
+                Master in Finance - Major in Financial Markets
+                <br><small>Ranked #4 Worldwide by Financial Times (2020)</small>
+                <br><em>Relevant coursework: Advanced Financial Markets, Portfolio Theory & Investment Analysis, Financial Risk Management, Trading Volatility</em>
+            </div>
+            <div class="education-item">
+                <strong>Institut Mines Telecom Lille Douai: 2014 - 2019</strong>
+                Master of Engineering in Statistics and Signal Processing
+                <br><em>Relevant coursework: Information Systems Management, Data Science, Cybersecurity, Time Series Analysis, Modern Signal Processing</em>
+            </div>
+            <div class="education-item">
+                <strong>Lycée Français Paul Valéry, Meknès: 2014</strong>
+                Baccalauréat, Scientific Section - Obtained with Highest Honors
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <strong>Tokamak Network, Singapore: Mar 2023 - Present</strong>
+                <div class="date">ZKP Researcher / Blockchain Developer (2 years)</div>
+                <ul>
+                    <li>Conducted in-depth research on zk-EVM verification and gas consumption on Ethereum mainnet</li>
+                    <li>Designed and implemented smart contracts for Tokamak zk-EVM (zk-SNARK) batch management</li>
+                    <li>Developed a collateralized NFT framework, enabling NFTs to be backed by staked tokens - currently drafting an Ethereum Improvement Proposal (EIP)</li>
+                    <li>Spearheaded an NFT project using Verifiable Delay Functions (VDF) for randomness generation</li>
+                    <li>Designed and implemented a Liquid Staking Token (Wrapped Staked TON), an index-based token for enhanced liquidity</li>
+                    <li>Reviewed and enhanced the staking v2 protocol code base with new features including fast withdrawals</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <strong>Founder (Defiesta), Paris: Feb 2021 - Dec 2023</strong>
+                <div class="date">Full-stack Blockchain Developer (3 years)</div>
+                <ul>
+                    <li>Created and launched <a href="https://defiesta-room.xyz/">Defiesta Room</a>, an interactive Web3 learning platform where students compete weekly and earn rewards</li>
+                    <li>Developed a Decentralized Exchange on L1 and L2s transforming Impermanent Loss into Impermanent Gain</li>
+                    <li>Audited smart contracts through manual reviews, functional testing, and fuzz testing</li>
+                    <li>Participated in Code4rena competitions, detecting High/Medium severity bugs in DeFi protocols</li>
+                    <li>Taught comprehensive blockchain development course to 100+ students, covering Ethereum and smart contracts</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <strong>Natixis, Paris: Jul 2020 - Mar 2021</strong>
+                <div class="date">Exotic Equity Derivatives Trader Assistant (9 months)</div>
+                <ul>
+                    <li>Verified pricing on all team transactions and computed volatility, dividend, and repo bumps</li>
+                    <li>Developed algorithms improving Stochastic Volatility pricing on Structured products (Autocalls, Phoenix)</li>
+                    <li>Enhanced hedging strategies resulting in significant cost improvements</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Notable Projects & Contributions</h2>
+            <div class="software-item">
+                <div class="software-info">
+                    <h3><a href="https://github.com/tokamak-network/Tokamak-zk-EVM">Tokamak zk-EVM</a></h3>
+                    <p>Developed the backend infrastructure for Tokamak's zk-EVM implementation, enabling efficient zero-knowledge proof verification on Ethereum</p>
+                </div>
+            </div>
+            <div class="software-item">
+                <div class="software-info">
+                    <h3><a href="https://github.com/tokamak-network/gem-nft-contract">Collateralized NFT Framework</a></h3>
+                    <p>Innovative NFT backing mechanism with staked tokens - drafting EIP for Ethereum Foundation</p>
+                </div>
+            </div>
+            <div class="software-item">
+                <div class="software-info">
+                    <h3><a href="https://github.com/tokamak-network/gem-nft-contract/blob/main/src/L2/Mock/DRBCoordinatorMock.sol">VDF-based NFT Project</a></h3>
+                    <p>Implemented Verifiable Delay Functions for provable randomness in NFT generation</p>
+                </div>
+            </div>
+            <div class="software-item">
+                <div class="software-info">
+                    <h3><a href="https://github.com/tokamak-network/gem-nft-contract/blob/main/src/L1/L1WrappedStakedTON.sol">Liquid Staking Token (WSTON)</a></h3>
+                    <p>Index-based token enhancing liquidity and flexibility for staked assets</p>
+                </div>
+            </div>
+            <div class="software-item">
+                <div class="software-info">
+                    <h3><a href="https://github.com/mehdi-defiesta/DefiestaDex">DEX with Impermanent Gain</a></h3>
+                    <p>Revolutionary approach to transform Impermanent Loss into gains for liquidity providers</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Blockchain Development</h3>
+                    <ul>
+                        <li>Solidity</li>
+                        <li>Rust</li>
+                        <li>Zero-Knowledge Proofs</li>
+                        <li>Hardhat & Foundry</li>
+                        <li>Web3.js & Ethers.js</li>
+                        <li>Smart Contract Security</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages/Frameworks</h3>
+                    <ul>
+                        <li>JS/TS</li>
+                        <li>React.js</li>
+                        <li>Next.js</li>
+                        <li>AWS</li>
+                        <li>Convex</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>French - Native</li>
+                        <li>English - Fluent (TOEIC: 920)</li>
+                        <li>Arabic - Bilingual</li>
+                        <li>German - Basics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Resources & Writing</h2>
+            <ul>
+                <li>📝 Technical articles on <a href="https://medium.com/@mehdi-tokamak">Medium</a> covering ZK proofs and blockchain development</li>
+                <li>🐙 Open source contributions on <a href="https://github.com/mehdi-defiesta">GitHub</a></li>
+                <li>🎓 Blockchain development course instructor (100+ students)</li>
+            </ul>
+        </section>
+
+        <section class="section contact">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> mehdiberiane@gmail.com</p>
+            <p><strong>Location:</strong> Paris, France</p>
+            <p><strong>ENS:</strong> defiesta.eth</p>
+        </section>
+    </div>
+</body>
+</html>
